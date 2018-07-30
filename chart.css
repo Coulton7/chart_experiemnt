@@ -1,0 +1,40 @@
+.container-fluid{
+	 padding-left:0px;
+	 padding-right:0px;
+}
+
+body{
+	font-size: 14px;
+	line-height: 1.618rem;
+	color: #535454;
+	font-family: "HelveticaNeue","Helvetica Neue","HelveticaNeueRoman","HelveticaNeue-Roman","Helvetica Neue Roman","Arial","TeXGyreHerosRegular","Helvetica","Tahoma","Geneva",sans-serif;
+    font-weight: 300;
+}/* sets the text color and base height and size*/
+
+@media screen and (max-width: 767px) {
+  body {
+      font-size: 12px;
+      line-height: 19px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+      font-size: 14px;
+      line-height: 23px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  body {
+      font-size: 16px;
+      line-height: 26px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+      font-size: 18px;
+      line-height: 29px;
+  }
+}
