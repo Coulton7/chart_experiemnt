@@ -12,9 +12,11 @@ body{
 }/* sets the text color and base height and size*/
 
 #bearing_protection{
+	height:500px;
 }
 
 #seal_support{
+	height: 500px;
 }
 
 .img-adaptive{
