@@ -17,6 +17,12 @@ body{
 #seal_support{
 }
 
+.img-adaptive{
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+}
+
 @media screen and (max-width: 767px) {
   body {
       font-size: 12px;
