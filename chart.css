@@ -12,13 +12,9 @@ body{
 }/* sets the text color and base height and size*/
 
 #bearing_protection{
-	width: 100%;
-	height: 100%;
 }
 
 #seal_support{
-	width: 100%;
-	height: 100%;
 }
 
 @media screen and (max-width: 767px) {
