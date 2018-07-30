@@ -11,6 +11,16 @@ body{
     font-weight: 300;
 }/* sets the text color and base height and size*/
 
+#bearing_protection{
+	width: 100%;
+	height: auto;
+}
+
+#seal_support{
+	width: 100%;
+	height: auto;
+}
+
 @media screen and (max-width: 767px) {
   body {
       font-size: 12px;
