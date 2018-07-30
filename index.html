@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="chart.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Failure', '% of reason'],
+          ['Lubrication',     11],
+          ['Corrosion',      4],
+          ['Other',  5],
+          ['Overloading', 4],
+          ['Misalignment',    13],
+          ['Disassembly',    15],
+          ['Particle Contamination',     48],
+        ]);
+
+        var options = {
+          title: 'Reasons for Bearing Protection Failure',
+          is3D: true,
+          colors: ['#003675', '#b0181d', '#888C8F', '#002A5B', '#b5b6b9', '#dcdcdc', '#dd1e25'],
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('bearing_protection'));
+        chart.draw(data, options);
+        function resizeHandler () {
+          chart.draw(data, options);
+        }
+        if (window.addEventListener) {
+          window.addEventListener('resize', resizeHandler, false);
+        }
+        else if (window.attachEvent) {
+          window.attachEvent('oneresize', resizeHandler);
+        }
+      }
+
+      google.charts.load("current",{packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawphChart);
+      function drawphChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Failure', '% of reason'],
+          ['Seal System',     22],
+          ['Operations',      37],
+          ['Bearing',  13],
+          ['Workshop', 7],
+          ['Install/Align',    5],
+          ['Process',    12],
+          ['Seal',     4],
+       ]);
+
+       var options = {
+         title:'Reasons for Bearing Protection Failure',
+         is3D: true,
+         colors: ['#dd1e25', '#dcdcdc', '#b5b6b9', '#003675', '#888C8F','#002A5B', '#a8bfd9' ],
+       };
+
+        var chart = new google.visualization.PieChart(document.getElementById('seal_support'));
+        chart.draw(data, options);
+
+        function resizeHandler () {
+          chart.draw(data, options);
+        }
+        if (window.addEventListener) {
+          window.addEventListener('resize', resizeHandler, false);
+        }
+        else if (window.attachEvent) {
+          window.attachEvent('oneresize', resizeHandler);
+        }
+      }
+      </script>
+
+  </head>
+  <body>
+    <div class="container-fluid" style="margin-right: auto; margin-left: auto; padding-left:0; padding-right:0;">
+      <div id="bearing_protection" style="width: 100%; height: 500px;"></div>
+      <div id="seal_support" style="width:100%; height: 500px;"></div>
+    </div>
+  </body>
+</html>
