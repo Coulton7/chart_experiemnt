@@ -31,3 +31,38 @@ google.charts.load("current", {packages:["corechart"]});
       window.attachEvent('oneresize', resizeHandler);
     }
   }
+
+  google.charts.load("current",{packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawphChart);
+  function drawphChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Failure', '% of reason'],
+      ['Seal System',     22],
+      ['Operations',      37],
+      ['Bearing',  13],
+      ['Workshop', 7],
+      ['Install/Align',    5],
+      ['Process',    12],
+      ['Seal',     4],
+   ]);
+
+   var options = {
+     'legend':{position:'left', alignment:'center'},
+     is3D: true,
+     colors: ['#dd1e25', '#dcdcdc', '#b5b6b9', '#003675', '#888C8F','#002A5B', '#a8bfd9' ],
+     'chartArea':{'top':'0'},
+   };
+
+    var chart = new google.visualization.PieChart(document.getElementById('seal_support'));
+    chart.draw(data, options);
+
+    function resizeHandler () {
+      chart.draw(data, options);
+    }
+    if (window.addEventListener) {
+      window.addEventListener('resize', resizeHandler, false);
+    }
+    else if (window.attachEvent) {
+      window.attachEvent('onresize', resizeHandler);
+    }
+  }
