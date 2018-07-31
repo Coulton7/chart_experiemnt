@@ -6,40 +6,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Failure', '% of reason'],
-          ['Lubrication',     11],
-          ['Corrosion',      4],
-          ['Other',  5],
-          ['Overloading', 4],
-          ['Misalignment',    13],
-          ['Disassembly',    15],
-          ['Particle Contamination',     48],
-        ]);
-
-        var options = {
-          is3D: true,
-          colors: ['#003675', '#b0181d', '#888C8F', '#002A5B', '#b5b6b9', '#dcdcdc', '#dd1e25'],
-          'legend': {position: 'right', alignment:'center'},
-          'chartArea':{'top':'0'},
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('bearing_protection'));
-        chart.draw(data, options);
-        function resizeHandler () {
-          chart.draw(data, options);
-        }
-        if (window.addEventListener) {
-          window.addEventListener('resize', resizeHandler, false);
-        }
-        else if (window.attachEvent) {
-          window.attachEvent('oneresize', resizeHandler);
-        }
-      }
+    <script>
 
       google.charts.load("current",{packages:["corechart"]});
       google.charts.setOnLoadCallback(drawphChart);
