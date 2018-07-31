@@ -63,6 +63,6 @@ google.charts.load("current", {packages:["corechart"]});
       window.addEventListener('resize', resizeHandler, false);
     }
     else if (window.attachEvent) {
-      window.attachEvent('onresize', resizeHandler);
+      window.attachEvent('oneresize', resizeHandler);
     }
   }
