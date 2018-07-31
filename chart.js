@@ -1,6 +1,6 @@
 google.charts.load("current", {packages:["corechart"]});
-  google.charts.setOnLoadCallback(drawChart);
-  function drawChart() {
+  google.charts.setOnLoadCallback(drawbearingChart);
+  function drawbearingChart() {
     var data = google.visualization.arrayToDataTable([
       ['Failure', '% of reason'],
       ['Lubrication',     11],
@@ -33,8 +33,8 @@ google.charts.load("current", {packages:["corechart"]});
   }
 
   google.charts.load("current",{packages:["corechart"]});
-  google.charts.setOnLoadCallback(drawphChart);
-  function drawphChart() {
+  google.charts.setOnLoadCallback(drawsealChart);
+  function drawsealChart() {
     var data = google.visualization.arrayToDataTable([
       ['Failure', '% of reason'],
       ['Seal System',     22],
